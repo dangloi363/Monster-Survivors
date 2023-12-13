@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class KnifeBehavior : ProjectileWeaponBehaviour
 {
-    KnifeController kc;
     protected virtual void Start()
     {
         base.Start();
-        kc = FindObjectOfType<KnifeController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += direction * kc.speed * Time.deltaTime; //chuyen dong cua dao
+        transform.position += direction * weaponData.Speed * Time.deltaTime; //chuyen dong cua dao
     }
 }
