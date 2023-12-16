@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &41109283
 Transform:
   m_ObjectHideFlags: 0
@@ -184,7 +184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &562185085
 Transform:
   m_ObjectHideFlags: 0
@@ -393,6 +393,8 @@ GameObject:
   - component: {fileID: 1439750428}
   - component: {fileID: 1439750434}
   - component: {fileID: 1439750433}
+  - component: {fileID: 1439750435}
+  - component: {fileID: 1439750436}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -412,11 +414,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e14db860eae8414e82ef08c23aec7c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
   lastHorizontalVector: 0
   lastVerticalVector: 0
   moveDir: {x: 0, y: 0}
   lastMovedVector: {x: 0, y: 0}
+  characterData: {fileID: 11400000, guid: b6c4307d262bdc44a8dff1fd936f280f, type: 2}
 --- !u!61 &1439750429
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -589,6 +591,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50a15cf6b1c569b4b943d72669287629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1439750435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439750427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec34a5b8e588a94cb5f94b1a1858b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterData: {fileID: 11400000, guid: b6c4307d262bdc44a8dff1fd936f280f, type: 2}
+  experience: 0
+  level: 1
+  experienceCap: 100
+  invincibilityDuration: 1
+  levelRanges:
+  - startLevel: 1
+    endLevel: 3
+    experienceCapIncrease: 100
+  - startLevel: 4
+    endLevel: 5
+    experienceCapIncrease: 200
+--- !u!114 &1439750436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439750427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc7fe13ee65c8d4da341bf7537525c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2316516190069579337
@@ -7228,9 +7266,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7910306909015392664, guid: ae168d580cb8f8c4199e95e5703280dc, type: 3}
+      propertyPath: drops.Array.data[0].dropRate
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 49148228172882454, guid: ae168d580cb8f8c4199e95e5703280dc, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1040805496507465772, guid: ae168d580cb8f8c4199e95e5703280dc, type: 3}
       propertyPath: m_Name
