@@ -42,14 +42,16 @@ public class EnemyStats : MonoBehaviour
         currentHealth -= dmg;
         if(currentHealth <= 0)
         {
-            Destroy(gameObject);
+            Kill();
         }
     }
 
-    //public void Kill()
-    //{
-    //    Destroy(gameObject);
-    //}
+    public void Kill()
+    {
+        //EnemySpawner es = FindObjectOfType<EnemySpawner>();
+        //es.OnEnemyKilled();
+        Destroy(gameObject);
+    }
 
     private void OnCollisionStay2D(Collision2D col)
     {
@@ -62,8 +64,8 @@ public class EnemyStats : MonoBehaviour
 
     private void OnDestroy()
     {
-        EnemySpawner esp = FindObjectOfType<EnemySpawner>();
-        esp.OnEnemyKilled();
+        EnemySpawner es = FindObjectOfType<EnemySpawner>();
+        if (es) es.OnEnemyKilled();
     }
 
     void ReturnEnemy()
