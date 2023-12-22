@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    //define the different states of the game
+    public static GameManager instance;
     public enum GameState
     {
         Gameplay,
@@ -20,8 +21,25 @@ public class GameManager : MonoBehaviour
     [Header("UI")]
     public GameObject pauseScreen;
 
+    //current stat displays
+    public Text currentHealthDisplay;
+    public Text currentRecoveryDisplay;
+    public Text currentMoveSpeedDisplay;
+    public Text currentMightDisplay;
+    public Text currentProjectileSpeedDisplay;
+    public Text currentMagnetDisplay;
+
     void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Debug.LogWarning("EXTRA " + this + " DELETED");
+            Destroy(gameObject);
+        }
         DisableScreen();    
     }
 
