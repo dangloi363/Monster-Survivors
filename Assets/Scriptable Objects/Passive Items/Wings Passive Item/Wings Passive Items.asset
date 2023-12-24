@@ -15,4 +15,6 @@ MonoBehaviour:
   multipler: 50
   level: 1
   nextLevelPrefab: {fileID: 5317740407568487002, guid: 8cf74c8cb451ee54692b152119f32d01, type: 3}
+  name: Wings
+  description: Character moves 50% faster
   icon: {fileID: 360099834, guid: 26986ff4fcdf7eb45aa4f343c9863cb3, type: 3}

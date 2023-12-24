@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2edeb51e6fadb3488790a389fa897fe, type: 3}
-  m_Name: Garlic Weapon
+  m_Name: Garlic Weapon Level 3
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5748192195914513350, guid: f774a5615d8cd534f9fdc3173b27eafc, type: 3}
-  damage: 5
+  prefab: {fileID: 5748192195914513350, guid: 615dee92cabaad24db479022b2aa560b, type: 3}
+  damage: 7
   speed: 0
-  cooldownDuration: 3
+  cooldownDuration: 2.5
   pierce: 0
-  level: 1
-  nextLevelPrefab: {fileID: 3442306361850497267, guid: d89eb86cab17e744ab29d097cabd96f7, type: 3}
-  name: Garlic
-  description: Damages nearby enemies
+  level: 2
+  nextLevelPrefab: {fileID: 0}
+  name: Garlic Level 3
+  description: Damage up by 2
   icon: {fileID: 824393352, guid: 26986ff4fcdf7eb45aa4f343c9863cb3, type: 3}
