@@ -6832,19 +6832,19 @@ MonoBehaviour:
   upgradeUIOptions:
   - upgradeNameDisplay: {fileID: 49382260}
     upgradeDescriptionDisplay: {fileID: 1992689336}
-    upgradeIcon: {fileID: 1530629006}
+    upgradeIcon: {fileID: 361793820}
     upgradeButton: {fileID: 189819079}
   - upgradeNameDisplay: {fileID: 1394859899}
     upgradeDescriptionDisplay: {fileID: 956829681}
-    upgradeIcon: {fileID: 1535506630}
+    upgradeIcon: {fileID: 8633304}
     upgradeButton: {fileID: 407326120}
   - upgradeNameDisplay: {fileID: 1189233508}
     upgradeDescriptionDisplay: {fileID: 1201723423}
-    upgradeIcon: {fileID: 1320455859}
+    upgradeIcon: {fileID: 614780686}
     upgradeButton: {fileID: 1173217018}
   - upgradeNameDisplay: {fileID: 381619729}
     upgradeDescriptionDisplay: {fileID: 1405919143}
-    upgradeIcon: {fileID: 226596941}
+    upgradeIcon: {fileID: 468169097}
     upgradeButton: {fileID: 672213530}
 --- !u!1 &1440709002
 GameObject:
