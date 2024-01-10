@@ -2589,7 +2589,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1884117818}
+  ingameSource: {fileID: 288056789}
   background: {fileID: 8300000, guid: ac81e521cc4fffd4cb560d4ddc70d306, type: 3}
+  ingamebg: {fileID: 0}
 --- !u!1 &862197295
 GameObject:
   m_ObjectHideFlags: 0
