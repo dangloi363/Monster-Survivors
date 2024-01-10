@@ -13,7 +13,10 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 moveDir;
     [HideInInspector]
     public Vector2 lastMovedVector;
-
+    //Sound
+    [SerializeField] AudioSource stepSource;
+    public AudioClip steps;
+    bool isMoving = false;
 
     //references
     Rigidbody2D rb;
@@ -30,6 +33,15 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         InputManagement();
+        if (isMoving)
+        {
+            if (!stepSource.isPlaying)
+                stepSource.Play();
+        }
+        else
+        {
+            stepSource.Stop();
+        }
     }
 
     void FixedUpdate()
@@ -62,8 +74,17 @@ public class PlayerMovement : MonoBehaviour
 
         if (moveDir.x != 0 &&  moveDir.y != 0)
         {
+            isMoving = true;
             lastMovedVector = new Vector2(lastHorizontalVector,lastVerticalVector); //while moving
         }
+
+        if (moveDir.x != 0 || moveDir.y != 0)
+        {
+
+            isMoving = true;
+        }
+        else
+            isMoving = false;
     }
 
     void Move()
